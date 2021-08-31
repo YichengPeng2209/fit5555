@@ -18,7 +18,7 @@ app.use(express.static("public/img"));
 app.use(express.static("public/css"));
 
 
-let url = 'mongodb://localhost:27017/FIT2095Week6';
+let url = 'mongodb://'+process.argv[2]+':27017/FIT2095Week6';
 mongoose.connect(url, function (err) {
     if (err) {
         console.log('Error in Mongoose connection');
