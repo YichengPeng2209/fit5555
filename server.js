@@ -164,3 +164,7 @@ app.post("/updateDotorByID",function(req,res)
 });
 
 app.listen(8080);
+
+app.use(function (req, res, next) {
+  res.status(404).render('404');
+});
